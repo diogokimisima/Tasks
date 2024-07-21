@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
@@ -10,6 +11,10 @@ export const Container = styled.div`
   grid-template-areas: 
     "menu top"
     "menu content";
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+    
+    }
 `;
 
 export const FixedContent = styled.section`
