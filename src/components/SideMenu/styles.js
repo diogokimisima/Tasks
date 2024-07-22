@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints"
 
 export const Container = styled.aside`
   grid-area: menu;
@@ -8,6 +9,13 @@ export const Container = styled.aside`
 
   display: flex;
   flex-direction: column;
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+    grid-area: none;
+    display: none;
+
+    
+  }
 `;
 
 export const Header = styled.header`
@@ -27,6 +35,8 @@ export const Title = styled.h1`
 export const Nav = styled.nav`
   display: flex;
   flex-direction: column;
+
+
   flex: 1;
 
   > a {
